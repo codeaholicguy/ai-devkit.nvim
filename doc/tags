@@ -1,0 +1,12 @@
+:AIDevKitAgents	ai-devkit.txt	/*:AIDevKitAgents*
+:AIDevKitSelectAgent	ai-devkit.txt	/*:AIDevKitSelectAgent*
+:AIDevKitSend	ai-devkit.txt	/*:AIDevKitSend*
+:AIDevKitSendSelection	ai-devkit.txt	/*:AIDevKitSendSelection*
+ai-devkit-command	ai-devkit.txt	/*ai-devkit-command*
+ai-devkit-commands	ai-devkit.txt	/*ai-devkit-commands*
+ai-devkit-contents	ai-devkit.txt	/*ai-devkit-contents*
+ai-devkit-detail-tail	ai-devkit.txt	/*ai-devkit-detail-tail*
+ai-devkit-notify	ai-devkit.txt	/*ai-devkit-notify*
+ai-devkit-requirements	ai-devkit.txt	/*ai-devkit-requirements*
+ai-devkit-setup	ai-devkit.txt	/*ai-devkit-setup*
+ai-devkit.nvim	ai-devkit.txt	/*ai-devkit.nvim*

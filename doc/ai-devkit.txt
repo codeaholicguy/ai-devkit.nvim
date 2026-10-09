@@ -1,0 +1,65 @@
+*ai-devkit.nvim* Manage AI DevKit agents from Neovim
+
+==============================================================================
+CONTENTS                                             *ai-devkit-contents*
+
+1. Requirements                                      |ai-devkit-requirements|
+2. Setup                                             |ai-devkit-setup|
+3. Commands                                          |ai-devkit-commands|
+
+==============================================================================
+REQUIREMENTS                                         *ai-devkit-requirements*
+
+Neovim 0.10+ is required.
+
+The plugin runs `ai-devkit` directly when available. If `command` is `auto` and
+`ai-devkit` is not executable, it falls back to:
+>
+  npx ai-devkit@latest
+<
+
+==============================================================================
+SETUP                                                *ai-devkit-setup*
+>
+  require("ai-devkit").setup({
+    command = "auto",
+    notify = true,
+    detail_tail = 20,
+  })
+<
+
+Options:
+
+                                                        *ai-devkit-command*
+`command`      String or list. Defaults to "auto".
+
+                                                        *ai-devkit-notify*
+`notify`       Boolean. Enables `vim.notify` messages. Defaults to true.
+
+                                                        *ai-devkit-detail-tail*
+`detail_tail`  Number. Recent detail lines requested from AI DevKit. Defaults
+               to 20.
+
+==============================================================================
+COMMANDS                                             *ai-devkit-commands*
+
+                                                        *:AIDevKitAgents*
+:AIDevKitAgents
+        Pick an active AI DevKit agent and open its detail JSON in a scratch
+        buffer.
+
+                                                        *:AIDevKitSelectAgent*
+:AIDevKitSelectAgent
+        Pick and remember an active agent for the current Neovim session.
+
+                                                        *:AIDevKitSend*
+:AIDevKitSend
+        Prompt for a required message and send it to the selected agent.
+
+                                                        *:AIDevKitSendSelection*
+:'<,'>AIDevKitSendSelection
+        Prompt for a required message and send it with the selected line range
+        as context.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:
